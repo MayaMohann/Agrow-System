@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+    height: 80px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:  25px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+nav ul li {
+    margin-right: 50px;
+    color:white;
+    
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+nav ul li a:hover{
+    color: palevioletred;
+}
+.banner {
+    background-image: url('images/scenery.jpg'); /* Add your banner image path */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 610px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+}
+.about-us {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+   
+    text-align: justify;
+    font-size: 30px;
+}
+.services {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+.card-group{
+    height: 350px;
+}
+.card {
+    
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.crp form {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+.crp label {
+    display: block;
+    margin-top: 20px;
+    margin-left:145px;
+}
+.crp input {
+    width: 60%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left:145px;
+}
+.crp button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 175px;
+}
+
+.frt form {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+.frt label {
+    display: block;
+    margin-top: 20px;
+    margin-left:145px;
+}
+.frt input {
+    width: 60%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left:145px;
+}
+.frt button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 175px;
+}
+.reco{
+    height: 500px;
+    margin: 0 auto;
+}
+.ferrec{
+    height: 500px;
+    margin: 0 auto;
+}
+.dis{
+    height: 700px;
+}
+

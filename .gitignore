@@ -1,0 +1,15 @@
+# Environment files
+.env
+
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Secrets or configuration files
+config.py
+settings.py
+
+# Temporary or cache files
+*.log
+*.sqlite3
+.DS_Store
