@@ -26,6 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install Flask
 
+      - name: Verify Script
+        run: ls -l generate_static_files.py
+
       - name: Generate Static Files
         run: |
           python generate_static_files.py
