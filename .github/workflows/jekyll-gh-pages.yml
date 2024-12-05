@@ -1,4 +1,4 @@
-name: Deploy Flask App with CI/CD
+name: Deploy Flask App to GitHub Pages
 
 on:
   push:
@@ -7,11 +7,11 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-22.04  # Specify this for compatibility
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -24,15 +24,15 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install Flask-Frozen  # If using Flask-Frozen
           pip install -r requirements.txt
 
-      - name: Run Tests (Optional)
-        run: pytest  # Replace with your test framework
-
-      - name: Deploy to Production
-        env:
-          FLASK_APP: app.py
-          FLASK_ENV: production
+      - name: Generate Static Files
         run: |
-          # Start Flask server using Gunicorn (Replace command as needed)
-          gunicorn --bind 0.0.0.0:5000 app:app
+          python freeze.py  # Ensure freeze.py generates static files
+          mv ./build ./static  # Adjust if needed
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          path: ./static
